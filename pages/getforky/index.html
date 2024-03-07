@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Get Forky</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="less/styles.css">
+  <link rel="prefetch" href="//web5.zuppler.com/common.js"/>
+  <link rel="prefetch" href="//web5.zuppler.com/order.js"/>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/fcbe248703.js"></script>
+</head>
+    <body>
+    <section id="hero">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" alt="navigation"/>
+            <span></span>
+            <span></span>
+            <span></span>
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/morethanq.html">More Than Q</a></li>
+            <li><a href="pages/pjs.html">Pj's Pancake House</a></li>
+            <li><a href="pages/osteria.html">Osteria</a></li>
+            <li><a href="pages/portavia.html">Portavia</a></li>
+            <li><a href="pages/trattoria.html">Trattoria</a></li>
+            <li><a href="pages/careers.html">Careers</a></li>
+            <li><a href="pages/about.html">About Gretalia</a></li>
+          </ul>
+        </div>
+      </nav>
+      <img class="forky-logo" src="images/forky_logo.png" alt="Get Forky Logo">
+      <div id="other-locations">
+          <ul>
+            <li>
+              <a href="pages/morethanq.html"><img class="circle-logo" src="images/morethanq.svg" alt="More Than Q page link"></a>
+            </li>
+            <li>
+              <a href="pages/pjs.html"><img class="circle-logo" src="images/pjpan.svg" alt="PJs page link"></a>
+            </li>
+            <li>
+              <a href="pages/portavia.html"><img class="noncircle-logo" src="images/portavia.svg" alt="Portavia page link"></a>
+            </li>
+            <li>
+              <a href="pages/trattoria.html"><img class="noncircle-logo" src="images/trattoria.svg" alt="Trattoria page link"></a>
+            </li>
+            <li>
+              <a href="pages/about.html"><img class="noncircle-logo noncircle-last" src="images/greta.svg" alt="Gretalia Hospitality group page link"></a>
+            </li>
+        </ul>
+      </div>
+    </section>
+    <section id="slideshow" alt="slideshow">
+      <div class="slide-frame">
+        <img src="images/slide_frame.png" alt="Slide show for Get Forky Restaurants">
+          <ul id="slides">
+            <li class="slide-showing"></li>
+            <li class="slide"><img src="images/PJ_Eggs.png" alt="Eggs Benedict"></li>
+            <li class="slide"><img src="images/bluepancakes.jpg" alt=""></li>
+            <li class="slide"><img src="images/PJ_Waffle.png" alt="Chicken and waffles"></li>
+            <li class="slide"><img src="images/pjmeatballs.png" alt="PJs meatballs"></li>
+            <li class="slide"><img src="images/meat4.jpg" alt="meaty pizza with basil"></li>
+            <li class="slide"><img src="images/bbqspread.png" alt=""></li>
+            <li class="slide"><img src="images/croisandwich.jpg" alt=""></li>
+          </ul>
+          </div>
+          <script>
+            var slides = document.querySelectorAll('#slides .slide');
+            var currentSlide = 0;
+            var slideInterval = setInterval(nextSlide,3000);
+
+            function nextSlide() {
+              slides[currentSlide].className = 'slide';
+              currentSlide = (currentSlide+1)%slides.length;
+              slides[currentSlide].className = 'slide showing';
+            }
+          </script>
+      </section>
+      <section id="footer">
+      <div class="footer-nav">
+        <div class="footer-logo">
+          <img src="images/forkyfooter.png" alt="get forky logo">
+        </div>
+        <ul class="footer-links">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="pages/morethanq.html">More than Q BBQ</a>
+          </li>
+          <li>
+            <a href="pages/pjs.html">PJ's Pancake House</a>
+          </li>
+          <li>
+            <a href="pages/osteria.html">Osteria Procaccini</a>
+          </li>
+          <li>
+            <a href="pages/portavia.html">Portavia</a>
+          </li>
+          <li>
+            <a href="pages/trattoria.html">Trattoria Procaccini</a>
+          </li>
+          <li>
+            <a href="pages/careers.html">Careers</a>
+          </li>
+          <li>
+            <a href="pages/about.html">About Gretalia</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <ul>
+          <li>
+            <a href="https://twitter.com/GetForky" target="_blank"><i class="fab fa-twitter" alt="twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/getforky/" target="_blank"><i class="fab fa-instagram" alt="instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    </body>
+</html>

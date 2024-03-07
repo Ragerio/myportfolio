@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Trattoria</title>
+  <link rel="stylesheet" href="../less/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/fcbe248703.js"></script>
+  <meta name="format-detection" content="telephone=no">
+</head>
+    <body id="order-online">
+    <section id="hero">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" alt="navigation"/>
+            <span></span>
+            <span></span>
+            <span></span>
+          <ul id="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="trattoria.html">Trattoria</a></li>
+          </ul>
+        </div>
+      </nav>
+      <img class="hero-image" src="../images/trattoria2.svg" alt="Trattoria logo over table setting">
+      </div>
+    </section>
+    <section id="content">
+      <div class="container">
+        <div
+        id="zuppler-menu"
+        data-channel-url="http://api.zuppler.com/v3/channels/trattoriaprocaccini.json"
+        data-integration="trattoriaprocaccini"
+        data-restaurant-id="9585"
+        data-locale="en"
+        data-item="simple"
+        data-cart="simple"
+        data-colors-background="#ffffff"
+        data-colors-highContrast="#000000"
+        data-colors-midContrast="#333333"
+        data-colors-lowContrast="#999999"
+        data-colors-brand="#e5ceab"
+        data-colors-heroBackground="#9e5375"
+        data-colors-heroContrast="#FFFFFF"
+        data-fonts-heading="Alegreya Sans SC, helvetica, sans-serif"
+        data-fonts-body="Alegreya Sans SC, helvetica, sans-serif"
+        data-fonts-deco="Alegreya Sans SC, helvetica, sans-serif"
+      >
+        <!-- Loading -->
+        <div id="zloading">Please wait. Loading menu...</div>
+        <style>
+          @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+          #zloading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999999;
+            background: rgba(255, 255, 255, 0.8);
+            color: #000000;
+            font-size: 21px;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 200px;
+            padding-top: 30vh;
+          }
+        </style>
+        <!-- /Loading -->
+      </div>
+      <script src="//web5.zuppler.com/common.js"></script>
+      <script src="//web5.zuppler.com/order.js"></script>
+      <style>
+        .z-menu-category-title,
+        .z-menu-item-title {
+          text-transform: uppercase;
+        }
+      </style>
+      </div>
+    </section>
+    <section id="footer">
+    <div class="footer-nav">
+      <div class="footer-logo">
+        <img src="../images/forkyfooter.png" alt="get forky logo">
+      </div>
+      <ul class="footer-links">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="morethanq.html">More than Q BBQ</a>
+        </li>
+        <li>
+          <a href="pjs.html">PJ's Pancake House</a>
+        </li>
+        <li>
+          <a href="osteria.html">Osteria Procaccini</a>
+        </li>
+        <li>
+          <a href="portavia.html">Portavia</a>
+        </li>
+        <li>
+          <a href="trattoria.html">Trattoria Procaccini</a>
+        </li>
+        <li>
+          <a href="careers.html">Careers</a>
+        </li>
+        <li>
+          <a href="about.html">About Gretalia</a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-icons">
+      <ul>
+        <li>
+          <a href="https://twitter.com/GetForky" target="_blank"><i class="fab fa-twitter" alt="twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/getforky/" target="_blank"><i class="fab fa-instagram" alt="instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+    </body>
+</html>

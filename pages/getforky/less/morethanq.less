@@ -1,0 +1,172 @@
+#morethanq {
+
+  #hero {
+    position: relative;
+    height: 1104px;
+    background-image: url(../images/bbqribs.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: -23px;
+
+    .hero-image {
+      position: absolute;
+      left: 35%;
+      top: 9%;
+      max-width: 30%;
+    }
+
+    .order-button {
+      background: url("../images/orderonline1.svg") no-repeat;
+      display: inline-block;
+      position: relative;
+      width: 360px;
+      height: 180px;
+      left: 41%;
+      top: 62%;
+    }
+    .order-button:hover {
+      background: url("../images/orderonline2.svg") no-repeat;
+    }
+
+    #menu {
+      height: 877px;
+      padding-top: 200px;
+
+      li {
+        top: -60px;
+      }
+    }
+    #menuToggle {
+      span {
+        background: @text;
+      }
+    }
+  }
+
+  #content {
+    position: relative;
+    background: @brand;
+    z-index: 1;
+
+      .our-menu {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: linear-gradient(@brand-offset, @brand);
+
+        .container {
+          position: relative;
+          text-align: center;
+
+          .menu-button {
+            position: relative;
+            background-color: @text;
+            border: none;
+            color: @hover;
+            font-family: @font-family;
+            padding: 20px 85px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            bottom: 355px;
+            left: 130px;
+
+            &:hover, &:focus, &:active {
+              color: @text;
+              background-color: @brand;
+            }
+          }
+
+          .address {
+            bottom: 0px;
+
+            p {
+              padding-bottom: 20px;
+            }
+          }
+
+          .doordashbtn {
+            position: relative;
+            display: inline-block;
+
+            img {
+              position: relative;
+              height: 180px;
+              width: 250px;
+              top: -10px;
+              right: 66%;
+              border-radius: 10px;
+            }
+          }
+
+          .about-us {
+            position: relative;
+            font-family: @font-family;
+            color: @text;
+            width: 75%;
+            left: 13%;
+          }
+
+          .bottom-images {
+            left: 7%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            top: -160px;
+
+            li {
+              position: relative;
+              display: inline;
+              padding-right: 20px;
+              right: 7.5%;
+            }
+
+            img {
+              width: 25%;
+            }
+          }
+
+          h1 {
+            font-size: 60px;
+            text-transform: uppercase;
+            font-family: @font-family;
+          }
+
+          h2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-family: @font-family;
+            padding-top: 30px;
+          }
+
+          p {
+            position: relative;
+            font-size: 22px;
+            top: -50px;
+            line-height: 1.7;
+          }
+
+          .firstp {
+            top: -10px;
+          }
+
+          ul {
+            list-style: none;
+            position: relative;
+            right: 1%;
+
+            li {
+              font-size: 22px;
+              padding-bottom: 50px;
+
+            }
+          }
+        }
+
+        .last-logo {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+}

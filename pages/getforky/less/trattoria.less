@@ -1,0 +1,199 @@
+#trattoria {
+  #hero {
+    position: relative;
+    height: 1104px;
+    background-image: url(../images/ravioliwshrimp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: -16px;
+
+
+    .hero-image {
+      position: absolute;
+      left: 35%;
+      top: 15%;
+      max-width: 30%;
+    }
+
+    .tratt-button {
+      background: url("../images/orderonline1.svg") no-repeat;
+      display: inline-block;
+      position: relative;
+      width: 360px;
+      height: 180px;
+      left: 42%;
+      top: 50%;
+    }
+    .tratt-button:hover {
+      background: url("../images/orderonline2.svg") no-repeat;
+    }
+
+    #menu {
+      height: 877px;
+      padding-top: 200px;
+
+      li {
+        top: -60px;
+      }
+    }
+
+  }
+
+#content {
+  position: relative;
+  background: @brand-offset;
+  z-index: 1;
+
+    .container {
+      height: auto;
+      padding-bottom: 100px;
+
+      img {
+        position: relative;
+        top: 50px;
+        left: 8%;
+        width: 40%;
+        height: 400px;
+        border-radius: 10px;
+
+      }
+
+      .address {
+        left: 43px;
+        bottom: 185px;
+        ul {
+          li {
+            max-width: 50%;
+          }
+        }
+      }
+
+      .about-us {
+        position: relative;
+        font-family: @font-family;
+        color: @text;
+        top: 30px;
+        width: 75%;
+        left: 14%;
+      }
+    }
+
+    .our-menu {
+      padding-bottom: 50px;
+      background: linear-gradient(@brand-offset, @brand);
+
+      .container {
+        position: relative;
+        text-align: center;
+
+        .button-list {
+          display: block;
+
+          .menu-button {
+            position: relative;
+            background-color: @text;
+            border: none;
+            color: @hover;
+            font-family: @font-family;
+            padding: 20px 85px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            bottom: 320px;
+            left: 35px;
+
+            &:hover, &:focus, &:active {
+              color: @text;
+              background-color: @brand;
+            }
+          }
+
+          .cater-button {
+            position: relative;
+            background-color: @hover;
+            border: none;
+            color: @text;
+            font-family: @font-family;
+            padding: 20px 38px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            bottom: 320px;
+            left: 35px;
+
+            &:hover, &:focus, &:active {
+              color: @brand;
+              background-color: @text;
+            }
+          }
+
+          .doordashbtn {
+            position: relative;
+            display: inline-block;
+
+            img {
+              height: 180px;
+              width: 250px;
+              top: -170px;
+              left: 15%;
+            }
+          }
+        }
+
+        .bottom-images {
+          top: -160px;
+
+          li {
+            position: relative;
+            display: inline;
+            padding-right: 20px;
+            right: 7.5%;
+          }
+
+          img {
+            width: 30%;
+          }
+        }
+
+        h1 {
+          font-size: 60px;
+          text-transform: uppercase;
+          font-family: @font-family;
+        }
+
+        h2 {
+          font-size: 40px;
+          text-transform: uppercase;
+          font-family: @font-family;
+          padding-top: 30px;
+        }
+
+        p {
+          position: relative;
+          font-size: 22px;
+          line-height: 1.7;
+        }
+        ul {
+          list-style: none;
+          position: relative;
+          right: 1.5%;
+
+          li {
+            font-size: 22px;
+            padding-bottom: 50px;
+
+          }
+        }
+      }
+
+      .last-logo {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
