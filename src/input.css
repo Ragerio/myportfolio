@@ -18,36 +18,10 @@ body {
         height: 0;
         border-left: 48px solid transparent;
         border-right: 48px solid transparent;
-        border-bottom: 65px solid rgb(107 114 128); /* Change color as needed */
+        border-bottom: 65px solid rgb(107 114 128);
     }
     .hide {
         display: none;
-    }
-    .port-text {
-        z-index:100;
-        position:absolute;
-        top:0;
-        left:0;
-        height:100%;
-        width: 100%;
-        text-align: center;
-        display: table;
-        background: rgb(134, 0, 0);
-        /* Fall-back for browsers that don't support rgba */
-        background: rgba(134, 0, 0, .7);
-    }
-    .text {
-        color: #ffffff !important;
-        font-family:'Oswald', sans-serif;
-        font-size: 30px !important;
-        font-weight: 300 !important;
-        text-transform: uppercase;
-        text-decoration: none !important;
-        margin: 0;
-        padding: 0;
-        vertical-align: middle;
-        display: table-cell;
-        width: 100%;
     }
     input:focus {
         outline: 3px solid transparent;

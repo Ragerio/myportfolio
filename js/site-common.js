@@ -1,20 +1,23 @@
-(function ($) {
-
-    $(document).ready(function () {
-
-
-        $(".container-port-img").hover(function () {
-
-            $(this).children('.port-img').show('slow');
-            $(this).children('.text').slideToggle('slow');
-
-        }, function () {
-            $(this).children("img").fadeTo(200, 1)
-                .end().children(".port-text").hide();
-            $(this).children('.port-img').hide('slow');
-            //.end().children(".hover").slideToggle("slow");
-
+$( document ).ready(function() {
+    
+   function animatethis(targetElement, speed) {
+        $(targetElement).animate({ marginLeft: "-=10px"},
+        {
+            duration: speed,
+            complete: function ()
+            {
+                targetElement.animate({ marginLeft: "+=10px" },
+                {
+                    duration: speed,
+                    complete: function ()
+                    {
+                        animatethis(targetElement, speed);
+                    }
+                });
+            }
         });
-    });
+    };
 
-})(jQuery);
+//    animatethis($('#knight'), 1000);
+
+});
