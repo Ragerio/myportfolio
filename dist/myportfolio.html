@@ -5,31 +5,34 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="	crossorigin="anonymous"	referrerpolicy="no-referrer"></script>
 		<script src="../js/site-common.js"></script>
 	</head>
 	<body class="mx-auto bg-gradient-to-br from-gray-900 from-30% via-indigo-900 via-33% to-gray-900 to-70%">
-		<div class="main">
-			<div class="nav sticky top-0 text-white">
-				<input type="checkbox" class="menu-btn" id="menu-btn">
-				<label class="menu-icon my-6 ml-5" for="menu-btn">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-				<div class="menu-overlay flex flex-col items-center"></div>
-					<ul class="menu absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-28 mt-10 z-10">
-						<li class="p-2 text-center mx-2"><a href="#projects">Projects</a></li>
-						<li class="p-2 text-center mx-2"><a href="#about">About</a></li>
-						<li class="p-2 text-center mx-2"><a href="#contact">Contact</a></li>
-					</ul>
+		<div class="main relative z-0">
+			<div id="menu" class="fixed z-50 w-0 h-0 flex justify-center items-center bg-gray-700 opacity-0 duration-700">
+				<a href="javascript:void(0)"
+					class="fixed top-5 right-8 text-white hover:text-amber-500 text-7xl font-semibold duration-300"
+					onclick="closeMenu()">&times;</a>
+				<div class="flex flex-col text-white text-center text-xl font-light relative">
+					<a class="my-10 hover:text-amber-500 duration-300" href="#projects" onclick="closeMenu()">Projects</a>
+					<a class="my-10 hover:text-amber-500 duration-300" href="#about" onclick="closeMenu()">About</a>
+					<a class="my-10 hover:text-amber-500 duration-300" href="#contact" onclick="closeMenu()">Contact</a>
+				</div>
 			</div>
-			<section class="max-w-4xl mx-auto py-48">
+			<div class="pt-5 ml-5">
+				<a href="javascript:void(0)" onclick="openMenu()"
+					class="fixed py-3 bg-transparent text-xl text-white hover:text-amber-500 duration-300">
+					<span class="text-4xl">&#9776;</span>
+				</a>
+			</div>
+			<section class="max-w-4xl mx-auto pt-48 pb-20">
 				<div class="intro">
 					<h1 class="ml-5 mr-auto text-3xl my-4">Hello! I'm Matthew Ruggiero.</h1>
-					<p class="ml-5 mr-auto text-lg mt-8">I'm a Front-End Developer, Drupal Developer, UX/UI Designer, and Webmaster with 8 years of professional experience creating successful websites.</p>
+					<p class="ml-5 mr-auto text-lg mt-8">I'm a Web Developer/Webmaster with 8 years of professional experience creating successful websites. I specialize in Front-End Developement, Drupal Developement, and UX/UI Design</p>
 				</div>
-				<div class="flex flex-col items-center mt-20 xl:pb-14">
-					<div id="knight" class="relative w-24 h-40">
+				<div id="knight" class="flex flex-col items-center mt-20 xl:pb-14">
+					<div class="relative w-24 h-40 z-0">
 						<div class="helmpoint"></div>
 						<div class="helmpoint absolute top-1 left-2 rotate-12"></div>
 						<div class="helmpoint absolute top-1 right-2 -rotate-12"></div>
@@ -51,49 +54,49 @@
 						<div class="airhole rounded-full w-1 h-1 absolute bottom-11 right-5 bg-black"></div>
 					</div>
 				</div>
+				<div id="arrow" class="mt-48 xl:mt-52 flex flex-col items-center">
+					<div class="h-10 w-0 border-x-8 border-x-transparent border-t-[16px] animate-bounce border-b-white"></div>
+				</div>
 			</section>
-			<div class="flex flex-col items-center">
-				<div class="arrow h-10 w-0 border-x-8 border-x-transparent border-t-[16px] animate-bounce border-b-white"></div>
-			</div>
-			<section id="projects" class="max-w-7xl mx-auto pt-10">
-				<p class="max-w-md mx-auto my-10 text-center text-2xl">Check out a few of my latest projects</p>
+			<section id="projects" class="max-w-7xl mx-auto">
+				<p class="max-w-md mx-auto mb-10 text-center text-2xl">Check out a few of my latest projects</p>
 				<div class="mx-auto grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-					<div class=" my-5">
+					<div id="card-container" class=" my-5">
 						<a class="max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://www.ngosource.org/" target="_blank"><img class="rounded-xl" src="../img/ngosSS.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">NGOsource</p>
 					</div>
-					<div class=" my-5">
+					<div id="card-container" class=" my-5">
 						<a class="max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://tenyears.ngosource.org/" target="_blank"><img class="rounded-xl" src="../img/ngos10.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">10 Year Retrospective of NGOsource</p>
 					</div>	
-					<div class=" my-5">
+					<div id="card-container" class=" my-5">
 						<a class="max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://acceleratingmakers.publicgoodapphouse.org/" target="_blank"><img class="rounded-xl" src="../img/accelmaker.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">Accelerating Makers</p>
 					</div>
-					<div class="my-5">
+					<div id="card-container" class="my-5">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://www.tsgn.org/en" target="_blank"><img class="rounded-xl" src="../img/tsgn.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Global Network</p>
 					</div>
-					<div class="my-5">
+					<div id="card-container" class="my-5">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://www.techsoupamericas.org/en" target="_blank"><img class="rounded-xl" src="../img/tsam.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Americas</p>
 					</div>
-					<div class="my-5">
+					<div id="card-container" class="my-5">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="../pages/getforky/index.html" target="_blank"><img class="rounded-xl" src="../img/getforky.png" />
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 								</p>
@@ -101,60 +104,58 @@
 						</a>
 						<p class="max-w-md mx-auto text-center">Get Forky</p>
 					</div>
-				</div>
-				<div class="flex flex-col items-center">
-					<button class="my-4 px-7 py-4 relative bg-cyan-500 rounded-xl text-white hover:text-black hover:bg-gray-300 shadow-lg">See More</button>
-				</div>
-				<div class="mx-auto grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-					<div class="my-5">
+					<div  class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://www.techsoupafrica.org/en" target="_blank"><img class="rounded-xl" src="../img/tsaf.png"/>
 							<div class="absolute rounded-xl top-0 left-0 h-0 w-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Africa</p>
 					</div>
-					<div class="my-5">
+					<div  class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://yearinreview.techsoup.org/2022" target="_blank"><img class="rounded-xl" src="../img/yir.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Year in Review 2022</p>
 					</div>
-					<div class="my-5">
+					<div  class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://yearinreview.techsoup.org/2021" target="_blank"><img class="rounded-xl" src="../img/yir21.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Year in Review 2021</p>
 					</div>
-					<div class="my-5">
+					<div  class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://yearinreview.techsoup.org/2020" target="_blank"><img class="rounded-xl" src="../img/yir2020.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Year in Review 2020</p>
 					</div>
-					<div class="my-5">
+					<div  class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://yearinreview.techsoup.org/2019" target="_blank"><img class="rounded-xl" src="../img/yir19.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Year in Review 2019</p>
 					</div>
-					<div class="my-5">
+					<div  class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://yearinreview.techsoup.org/2018" target="_blank"><img class="rounded-xl" src="../img/yir18.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Year in Review 2018</p>
 					</div>
-					<div class="my-5">
+					<div class="card-container-ex my-5 hidden">
 						<a class=" max-w-sm mx-auto rounded-xl shadow-lg flex min-h-52 hover:-translate-y-1 hover:scale-105 duration-200" href="https://yearinreview.techsoup.org/2016" target="_blank"><img class="rounded-xl" src="../img/yir16.png"/>
 							<div class="absolute rounded-xl top-0 left-0 w-0 h-0 flex flex-col justify-center items-center ">
 							</div>
 						</a>
 						<p class="max-w-md mx-auto text-center">TechSoup Year in Review 2016</p>
 					</div>
+				</div>
+				<div id="click" class="flex flex-col items-center">
+					<button id="see-more" class="my-4 px-7 py-4 relative bg-amber-500 rounded-xl text-white hover:text-black hover:bg-gray-300 shadow-lg">See More</button>
 				</div>
 			</section>
 			<section id="about" class="max-w-screen-md mx-auto my-20">
@@ -200,7 +201,7 @@
 							<input class="text-white noselect min-w-full rounded-sm my-2 py-4 px-4 bg-transparent border-solid border focus:bg-gray-900 border-gray-500" type="text" id="name" name="name" placeholder="Name" required=""><br>
 							<input class="text-white noselect min-w-full rounded-sm my-2 py-4 px-4 bg-transparent border-solid border focus:bg-gray-900 border-gray-500" type="text" id="email" name="email" placeholder="Email" required=""><br>
 							<textarea class="text-white noselect min-w-full min-h-56 rounded-sm my-2 py-4 px-4 bg-transparent border-solid border focus:bg-gray-900 border-gray-500" id="message" name="message" placeholder="Message"></textarea><br>
-							<button class="px-7 py-4 bg-cyan-500 rounded-xl text-white hover:text-black hover:bg-gray-300 shadow-lg" type="submit">Send Message</button>
+							<button class="px-7 py-4 bg-amber-500 rounded-xl text-white hover:text-black hover:bg-gray-300 shadow-lg" type="submit">Send Message</button>
 						</div>
 					</form>
 				</div>
@@ -208,7 +209,7 @@
 		</div>
 		<footer>
 			<div class="bg-slate-600 py-5">
-				<h3 class="text-white text-lg text-center">This website was made with HMTL5, TailwindCSS, and Javascript</h3>
+				<h3 class="text-white text-lg text-center">This website was made with HMTL5, TailwindCSS, and Javascript/JQuery</h3>
 				<ul>
 					<li></li>
 					<li></li>
@@ -216,5 +217,19 @@
 				</ul>
 			</div>
 		</footer>
+		<script>
+			var menu = $("#menu");
+
+			function openMenu() {
+				menu.removeClass("w-0 h-0 opacity-0").addClass("w-screen h-screen opacity-95");
+			}
+
+			function closeMenu() {
+				menu.removeClass("w-screen h-screen opacity-95").addClass("w-0 h-0 opacity-0");
+			}
+
+			$(".open-menu").click(openMenu);
+			$(".close-menu").click(closeMenu);
+		</script>
 	</body>
 </html> 
