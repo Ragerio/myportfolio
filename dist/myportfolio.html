@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Rage Builds Web Stuff</title>
+		<title>Ragerio Codes</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="	crossorigin="anonymous"	referrerpolicy="no-referrer"></script>
@@ -14,14 +14,14 @@
 					class="fixed top-5 right-8 text-white hover:text-amber-500 text-7xl font-semibold duration-300"
 					onclick="closeMenu()">&times;</a>
 				<div class="flex flex-col text-white text-center text-xl font-light relative">
-					<a class="my-10 hover:text-amber-500 duration-300" href="#projects" onclick="closeMenu()">Projects</a>
-					<a class="my-10 hover:text-amber-500 duration-300" href="#about" onclick="closeMenu()">About</a>
-					<a class="my-10 hover:text-amber-500 duration-300" href="#contact" onclick="closeMenu()">Contact</a>
+					<a class="py-5 my-4 text-2xl hover:text-amber-500 duration-300" href="#projects" onclick="closeMenu()">Projects</a>
+					<a class="py-5 my-4 text-2xl hover:text-amber-500 duration-300" href="#about" onclick="closeMenu()">About</a>
+					<a class="py-5 my-4 text-2xl hover:text-amber-500 duration-300" href="#contact" onclick="closeMenu()">Contact</a>
 				</div>
 			</div>
 			<div class="pt-5 ml-5">
 				<a href="javascript:void(0)" onclick="openMenu()"
-					class="fixed py-3 bg-transparent text-xl text-white hover:text-amber-500 duration-300">
+					class="fixed px-5 py-3 bg-transparent text-xl text-white hover:text-amber-500 duration-300">
 					<span class="text-4xl">&#9776;</span>
 				</a>
 			</div>
@@ -195,12 +195,12 @@
 				<div class="contact mx-auto max-w-screen-md">
 					<h1 class="ml-3 text-3xl my-4">Contact</h1>
 					<p class="ml-3 my-4">Reach out below or send me an email directly at <strong>mruggiero530@gmail.com</strong></p>
-					<form class="mx-3" method="post" action="https://formspree.io/f/xqkrbrry">
+					<form class="mx-3" method="post" name="contact-form" action="https://formspree.io/f/xqkrbrry">
 						<div class="fields">
 							<input class="text-white noselect min-w-full rounded-sm my-2 py-4 px-4 bg-transparent border-solid border focus:bg-gray-900 border-gray-500" type="text" id="name" name="name" placeholder="Name" required=""><br>
 							<input class="text-white noselect min-w-full rounded-sm my-2 py-4 px-4 bg-transparent border-solid border focus:bg-gray-900 border-gray-500" type="text" id="email" name="email" placeholder="Email" required=""><br>
 							<textarea class="text-white noselect min-w-full min-h-56 rounded-sm my-2 py-4 px-4 bg-transparent border-solid border focus:bg-gray-900 border-gray-500" id="message" name="message" placeholder="Message"></textarea><br>
-							<button class="px-7 py-4 bg-sky-600 rounded-xl text-lg text-white hover:bg-sky-400 shadow-lg" type="submit">Send Message</button>
+							<button class="px-7 py-4 bg-sky-600 rounded-xl text-lg text-white hover:bg-sky-400 shadow-lg" type="submit" onclick="submitForm()">Send Message</button>
 						</div>
 					</form>
 				</div>
@@ -229,6 +229,14 @@
 
 			$(".open-menu").click(openMenu);
 			$(".close-menu").click(closeMenu);
+		</script>
+		<script>
+			function submitForm() {
+
+				var frm = document.getElementsByName('contact-form')[0];
+				frm.submit();
+				frm.reset();
+			}
 		</script>
 	</body>
 </html> 
